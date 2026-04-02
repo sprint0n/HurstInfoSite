@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap");
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #0a1f13 0%, #111a0e 40%, #16102a 100%);
+  padding-bottom: 5rem;
+}
+
+.mapWrapper {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.mapImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.5) saturate(0.7);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem 4rem;
+  background: linear-gradient(
+    to top,
+    rgba(10, 31, 19, 0.9) 0%,
+    transparent 60%
+  );
+}
+
+.overlay h1 {
+  font-family: "Cinzel", serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: #e8d5ff;
+  margin: 0;
+  letter-spacing: 0.08em;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 600px;
+  gap: 3rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  align-items: start;
+}
+
+@media (max-width: 950px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.textSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.infoBlock {
+  width: 100%;
+  background: linear-gradient(
+    145deg,
+    rgba(26, 61, 43, 0.5),
+    rgba(15, 8, 30, 0.6)
+  );
+  border: 1px solid rgba(124, 95, 160, 0.25);
+  border-radius: 8px;
+  padding: 1.5rem;
+
+  min-height: 0 !important;
+  height: auto !important;
+}
+
+.infoBlock h4 {
+  font-family: "Cinzel", serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #b89fd4;
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(124, 95, 160, 0.2);
+}
+
+.infoBlock p {
+  font-family: "Crimson Text", serif;
+  font-size: 1.1rem;
+  color: #c0d0b8;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.imageSection {
+  align-self: start;
+  position: sticky;
+  top: 2rem;
+}
+
+.imageCard {
+  background: linear-gradient(
+    145deg,
+    rgba(26, 61, 43, 0.4),
+    rgba(15, 8, 30, 0.5)
+  );
+  border: 1px solid rgba(124, 95, 160, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.imageCard h5 {
+  font-family: "Cinzel", serif;
+  font-size: 0.7rem;
+  color: #b89fd4;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.sideImg {
+  width: 100%;
+  margin-left: 0;
+  height: auto;
+}
+
+.backBtn {
+  display: inline-block;
+  font-family: "Cinzel", serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #7db88a;
+  text-decoration: none;
+  border: 1px solid rgba(125, 184, 138, 0.35);
+  padding: 0.6rem 1.25rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  transition: all 0.25s;
+}
+
+.backBtn:hover {
+  background: rgba(125, 184, 138, 0.1);
+  color: #a8d4b0;
+}

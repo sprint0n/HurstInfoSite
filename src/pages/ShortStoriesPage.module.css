@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap");
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #0a1f13 0%, #111a0e 40%, #16102a 100%);
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    ellipse,
+    rgba(124, 95, 160, 0.1) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.storyRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  max-width: 640px;
+  background: linear-gradient(
+    145deg,
+    rgba(26, 61, 43, 0.65),
+    rgba(18, 10, 35, 0.75)
+  );
+  border: 1px solid rgba(124, 95, 160, 0.35);
+  border-radius: 10px;
+  padding: 1.4rem 1.75rem;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.storyRow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(124, 95, 160, 0.5),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.storyRow:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 40px rgba(124, 95, 160, 0.28),
+    0 4px 12px rgba(0, 0, 0, 0.4);
+  border-color: rgba(184, 159, 212, 0.55);
+}
+
+.storyRow:hover::before {
+  opacity: 1;
+}
+
+.storyRow h4 {
+  font-family: "Cinzel", serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #e0d0f8;
+  margin: 0;
+}
+
+.downloadLink {
+  font-family: "Cinzel", serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7db88a;
+  text-decoration: none;
+  border: 1px solid rgba(125, 184, 138, 0.4);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: all 0.25s;
+}
+
+.downloadLink:hover {
+  background: rgba(125, 184, 138, 0.1);
+  border-color: rgba(125, 184, 138, 0.75);
+  color: #a8d4b0;
+  box-shadow: 0 0 12px rgba(125, 184, 138, 0.2);
+}

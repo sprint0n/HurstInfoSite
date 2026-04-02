@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap");
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #0a1f13 0%, #111a0e 40%, #16102a 100%);
+  padding: 3rem 2rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.parchment {
+  max-width: 760px;
+  width: 100%;
+  background: linear-gradient(
+    145deg,
+    rgba(20, 48, 30, 0.75),
+    rgba(14, 7, 28, 0.85)
+  );
+  border: 1px solid rgba(124, 95, 160, 0.4);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow:
+    0 8px 48px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(184, 159, 212, 0.1);
+  position: relative;
+}
+
+.parchment::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(124, 95, 160, 0.7),
+    transparent
+  );
+  border-radius: 12px 12px 0 0;
+}
+
+.eventId {
+  font-family: "Cinzel", serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(184, 159, 212, 0.5);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-family: "Cinzel", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #e8d5ff;
+  margin: 0 0 1.5rem;
+  text-shadow: 0 0 20px rgba(184, 159, 212, 0.3);
+  letter-spacing: 0.08em;
+}
+
+.meta {
+  background: rgba(125, 184, 138, 0.06);
+  border: 1px solid rgba(125, 184, 138, 0.2);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.meta p {
+  font-family: "Crimson Text", serif;
+  font-size: 1.05rem;
+  color: #a8c8b0;
+  margin: 0.2rem 0;
+  line-height: 1.5;
+}
+
+.meta strong {
+  color: #7db88a;
+  font-weight: 600;
+}
+
+.content h4 {
+  font-family: "Cinzel", serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #b89fd4;
+  margin: 1.75rem 0 0.6rem;
+}
+
+.content p {
+  font-family: "Crimson Text", serif;
+  font-size: 1.08rem;
+  color: #c0d0b8;
+  line-height: 1.7;
+  margin: 0 0 0.5rem;
+}
+
+.description {
+  font-style: italic;
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 2rem;
+  font-family: "Cinzel", serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #7db88a;
+  text-decoration: none;
+  border: 1px solid rgba(125, 184, 138, 0.35);
+  padding: 0.5rem 1.1rem;
+  border-radius: 4px;
+  transition: all 0.25s;
+}
+
+.backLink:hover {
+  background: rgba(125, 184, 138, 0.1);
+  border-color: rgba(125, 184, 138, 0.7);
+  color: #a8d4b0;
+}

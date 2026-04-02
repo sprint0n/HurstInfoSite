@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap");
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #0a1f13 0%, #111a0e 40%, #16102a 100%);
+  padding: 2.5rem 2rem 5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(124, 95, 160, 0.3);
+}
+
+.header h1 {
+  font-family: "Cinzel", serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 700;
+  color: #e8d5ff;
+  margin: 0;
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 24px rgba(184, 159, 212, 0.4);
+}
+
+.backLink {
+  font-family: "Cinzel", serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #7db88a;
+  text-decoration: none;
+  border: 1px solid rgba(125, 184, 138, 0.35);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.25s;
+}
+
+.backLink:hover {
+  background: rgba(125, 184, 138, 0.1);
+  border-color: rgba(125, 184, 138, 0.7);
+  color: #a8d4b0;
+}
+
+.contentGrid {
+  display: grid;
+
+  grid-template-columns: 1fr 240px;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+  .imageSection {
+    order: -1;
+  }
+}
+
+.textSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 0;
+}
+
+.infoBlock {
+  background: linear-gradient(
+    145deg,
+    rgba(26, 61, 43, 0.5),
+    rgba(15, 8, 30, 0.6)
+  );
+  border: 1px solid rgba(124, 95, 160, 0.25);
+  border-radius: 8px;
+  padding: 1.4rem;
+}
+
+.infoBlock h4 {
+  font-family: "Cinzel", serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #b89fd4;
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(124, 95, 160, 0.2);
+}
+
+.infoBlock p {
+  font-family: "Crimson Text", serif;
+  font-size: 1.05rem;
+  color: #c0d0b8;
+  margin: 0.3rem 0;
+  line-height: 1.65;
+}
+
+.tooltip {
+  color: #9dc9a7 !important;
+  font-style: italic;
+  font-size: 1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.loreText {
+  font-style: italic;
+  color: #a8b8a0 !important;
+}
+
+.imageSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.itemImg {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 0 16px rgba(124, 95, 160, 0.5));
+  border-radius: 8px;
+}
+
+.lootBox {
+  background: linear-gradient(
+    145deg,
+    rgba(26, 61, 43, 0.5),
+    rgba(15, 8, 30, 0.6)
+  );
+  border: 1px solid rgba(124, 95, 160, 0.25);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  width: 100%;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.lootBox h5 {
+  font-family: "Cinzel", serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #b89fd4;
+  margin: 0 0 0.5rem;
+}
+
+.lootBox p {
+  font-family: "Crimson Text", serif;
+  font-size: 0.95rem;
+  color: #a8c8b0;
+  margin: 0;
+  line-height: 1.5;
+}
+.animationBox {
+  background: linear-gradient(
+    145deg,
+    rgba(124, 95, 160, 0.2),
+    rgba(15, 8, 30, 0.6)
+  );
+  border: 1px solid rgba(124, 95, 160, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.animationBox h5 {
+  font-family: "Cinzel", serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #b89fd4;
+  margin: 0;
+}
+
+.animImg {
+  width: 180px;
+  height: auto;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 0 8px rgba(124, 95, 160, 0.3));
+}
