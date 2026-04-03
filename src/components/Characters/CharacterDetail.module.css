@@ -130,6 +130,29 @@
   color: #9dc9a7;
 }
 
+.scheduleList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.scheduleList li {
+  font-family: "Crimson Text", serif;
+  font-size: 1.05rem;
+  color: #c8d8c0;
+  line-height: 1.5;
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 0.5rem;
+}
+
+.scheduleList strong {
+  color: #9dc9a7;
+}
+
 .imageSection {
   display: flex;
   flex-direction: column;

@@ -11,6 +11,8 @@ import HurstWalkCycle from "../../assets/HurstWalkCycle.gif";
 import WardWalkCycle from "../../assets/WardWalkCycle.gif";
 import SylvaWalkCycle from "../../assets/SylvaWalkCycle.gif";
 
+const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
 const CharacterDetail = ({ data }) => {
   const charactersWithImages = ["Hurst", "Ward", "Sylva"];
 
@@ -33,6 +35,8 @@ const CharacterDetail = ({ data }) => {
   const relationships = data.Relationships
     ? Object.entries(data.Relationships)
     : [];
+
+  const hasSchedule = DAYS.some((day) => data[day]);
 
   return (
     <div className={classes.container}>
@@ -80,6 +84,22 @@ const CharacterDetail = ({ data }) => {
               </ul>
             </section>
           )}
+
+          {hasSchedule && (
+            <section className={classes.detailBlock}>
+              <h4>Schedule</h4>
+              <ul className={classes.scheduleList}>
+                {DAYS.map((day) =>
+                  data[day] ? (
+                    <li key={day}>
+                      <strong>{day}</strong>
+                      <span>{data[day]}</span>
+                    </li>
+                  ) : null,
+                )}
+              </ul>
+            </section>
+          )}
         </div>
 
         <div className={classes.imageSection}>
@@ -103,7 +123,7 @@ const CharacterDetail = ({ data }) => {
                 />
               </div>
               <div className={classes.imageWrapper}>
-                <label>Movement</label>
+                <label>Walk Cycle</label>
                 <img
                   src={characterWalkCycle[data.id]}
                   alt={`${data.id} walk cycle`}
